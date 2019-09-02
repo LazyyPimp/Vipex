@@ -16,10 +16,10 @@ if(!prefix){
                        "Type " + prefix + "tempmute [1s/1m/1h] to mute a user!\n" +
                        "Type " + prefix + "clear [amount] to clear messages!\n" +
                        "Type " + prefix + "eatwhat for food suggestion!\n" +
-                       "Type " + prefix + "kick to kick members from the server!\n +
+                       "Type " + prefix + "kick to kick members from the server!\n" +
                        "Type " + prefix + "ban to ban a member!\n" +
                        "Type " + prefix + "dm to dm any person in the server!\n" +
-                       "Type " + prefix + "report to report a member in the server!\n
+                       "Type " + prefix + "report to report a member in the server!\n"
                        + "```");
 
 
