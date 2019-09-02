@@ -1,5 +1,5 @@
 module.exports.run = (bot, message, args, discord) => {
-let em = new discord.RichEmbed()
+let reembed = new discord.RichEmbed()
 .setTitle(`${bot.user.username} Restarting...`)
 .setDescription(":wave: Restarting...")
 .setTimestamp()
@@ -12,7 +12,7 @@ let embed = new discord.RichEmbed()
 .setColor("GOLD")
 
   function restart(channel) {
-    channel.send({embed: em})
+    channel.send({reembed})
     .then(m => m.delete(5000))
     .then(() => bot.destroy())
     .then(() => bot.login(process.env.botToken))
