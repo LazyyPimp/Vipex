@@ -46,7 +46,7 @@ if(!prefix){
                         "Type " + prefix + "uselessweb to get a useless website!\n" +
                         "Type " + prefix + "google [stuff] to google stuffs!\n" +
                         "Type " + prefix + "uptime to get the bots uptime in all servers!\n" +
-                        "Type" + prefix + "online,idle,dnd,invis to set bot status!\n
+                        "Type " + prefix + "online,idle,dnd,invis to set bot status!\n"
                         + "```");
 
 }
