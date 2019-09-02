@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const config = require("../Configuration/config.json");
 
-module.exports = async(bot, msg, args) => {
+module.exports.run = async (bot, message, args) => {
     let game = args.join(" ");
 
     // EMBEDS
