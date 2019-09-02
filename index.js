@@ -101,7 +101,7 @@ bot.on('message', message => {
     };
     
     if(cmd === ".ban") {
-  if(!message.member.roles.some(r=>["Administrator"].includes(r.name)) )
+  if (message.member.hasPermission("BAN_MEMBERS") {
 return message.reply("Sorry, you don't have permissions to use this!");
 
 let member = message.mentions.members.first();
