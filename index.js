@@ -31,7 +31,7 @@ bot.on("ready", async() => {
 
     //was making joke on a friend
     //bot.user.setActivity("Chan Ho is Gay",{type: "STREAMING"});
-    bot.user.setActivity("HONK HONK! || .help",{type: "STREAMING"});
+    bot.user.setActivity("Being developed!",{type: "PLAYING"});
 });
 
 
@@ -84,7 +84,7 @@ bot.on("message", async message => {
         .setColor("#15f153")
         .setThumbnail(botIcon)
         .addField("Bot Name", bot.user.username)
-        .addField("Owner", "Sonia, Winds")
+        .addField("Owner", "Lazyy")
         .addField("Created On", bot.user.createdAt);
 
         return message.channel.send(botInfo);
