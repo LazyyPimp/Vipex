@@ -1,20 +1,28 @@
+exports.run = async (client, message, [status, game, type]) => {
+  client.user.setStatus(status);
 
-const oid = process.env.oid
+  const list = {
+    play: "PLAYING", 
+    stream: "STREAMING", 
+    listen: "LISTENING", 
+    watch: "WATCHING"
+  };
 
-module.exports.run = (bot, message, args, discord) => {
- var game = args.join(' ')
-  if (message.author.id == oid) {
-   if (!game) {
-    message.channel.send(`:ok_hand: Okay, I will set my activity back to normal!`)
-    bot.user.setActivity(`for h!help | ${bot.guilds.size} servers`, {type: "WATCHING"})
-  } else {
-    bot.user.setActivity(`${game}`, {type: "PLAYING"})
-    message.channel.send(`:ok_hand: Okay, I will set my activity to '${game}'!`)
-  }
-  } else {
-     message.channel.send("Nope!")
-  } 
-}
+  if (!game) { game = `Playing around with ${client.owner.username}`; } 
+  if (game.toLowerCase() === "null") { game = null; } 
+  else { game = `m~help | ${game}`; }
+
+  client.user.setPresence({ activity: { name: game, type: list[type] } }); 
+};
+
+exports.conf = {
+  enabled: true,
+  runIn: ["text", "dm"],
+  aliases: [],
+  permLevel: 9,
+  botPerms: [],
+};
+
 
 module.exports.help = {
   name: "setGame",
