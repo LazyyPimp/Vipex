@@ -62,7 +62,7 @@ bot.on("message", async message => {
 });
 
 
-client.on('message', message => {
+bot.on('message', message => {
   if (message.content === '.invite') {
     message.reply("https://discord.gg/3YfpZrG");
   }
@@ -70,14 +70,46 @@ client.on('message', message => {
 
 
 
-client.on('message', message => {
+bot.on('message', message => {
   if (message.content === '.owner') {
     message.reply("Lazyy#9825");
   }
 });
 
-    //bot info and server info
-    if(cmd == `${prefix}p` || cmd == `${prefix}ping`) return message.channel.send("pong! (0ms)");
+  const args = message.content.slice(prefix.length).trim().split(/ +/g);
+    const cmd = args.shift().toLowerCase();
+
+    
+     if (cmd === "ping") {
+        const msg = await message.channel.send(`🏓 Pinging....`);
+
+        // Edit the message
+        msg.edit(`🏓 Pong!\nLatency is ${Math.floor(msg.createdTimestap - message.createdTimestap)}ms\nAPI Latency is ${Math.round(client.ping)}ms`);
+    }
+    
+    
+    	 if(cmd === "kick") {
+        message.delete()
+        let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+        if(!kUser) return message.channel.send("❌ Please **@mention** your target!");
+        let kReason = args.join(" ").slice(0);
+        if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("**🔒 Sorry, you can't do that.**");
+        if(kUser.hasPermission("KICK_MEMBERS")) return message.channel.send("❌ Failed to **Kick**, need a higher than Roles.");
+    
+        let kickEmbed = new Discord.RichEmbed()
+        .setDescription("**👢 Kicked**")
+        .setColor(0xFF0000)
+        .addField("User", `${kUser}`)
+        .addField("Moderator", `<@${message.author.id}>`)
+        .addField("Reason", `**\`\`\`${kReason}\`\`\`**`);
+    
+        let adminlog = message.guild.channels.find(`name`, "mod-logs");
+        if(!adminlog) return message.channel.send("❌ Sorry, i need the Logging Channels with name **#mod-logs**.");
+        message.guild.member(kUser).kick(kReason);
+        adminlog.send(kickEmbed);
+    };
+   
+    
     
     if(cmd == `${prefix}serverinfo` || cmd == `${prefix}sinfo`){
         
