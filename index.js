@@ -53,6 +53,28 @@ bot.on("message", async message => {
         if (message.content === 'ping') {
     	message.reply('pong');
   	}
+    
+    
+    client.on('message', message => {
+  if (message.content === '.avatar') {
+    message.reply(message.author.avatarURL);
+  }
+});
+
+
+client.on('message', message => {
+  if (message.content === '.invite') {
+    message.reply("https://discord.gg/3YfpZrG");
+  }
+});
+
+
+
+client.on('message', message => {
+  if (message.content === '.owner') {
+    message.reply("Lazyy#9825");
+  }
+});
 
     //bot info and server info
     if(cmd == `${prefix}p` || cmd == `${prefix}ping`) return message.channel.send("pong! (0ms)");
