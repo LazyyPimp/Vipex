@@ -71,7 +71,7 @@ bot.on('message', message => {
   }
 });
     
-     if (cmd === "ping") {
+     if (cmd === ".ping") {
         const msg = await message.channel.send(`🏓 Pinging....`);
 
         // Edit the message
@@ -79,7 +79,7 @@ bot.on('message', message => {
     }
     
     
-    	 if(cmd === "kick") {
+    	 if(cmd === ".kick") {
         message.delete()
         let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
         if(!kUser) return message.channel.send("❌ Please **@mention** your target!");
@@ -99,6 +99,26 @@ bot.on('message', message => {
         message.guild.member(kUser).kick(kReason);
         adminlog.send(kickEmbed);
     };
+    
+    if(command === ".ban") {
+  if(!message.member.roles.some(r=>["Administrator"].includes(r.name)) )
+return message.reply("Sorry, you don't have permissions to use this!");
+
+let member = message.mentions.members.first();
+if(!member)
+  return message.reply("Please mention a valid member of this server");
+if(!member.bannable) 
+  return message.reply("I cannot ban this user! Do they have a higher role? 
+Do I have ban permissions?");
+
+let reason = args.slice(1).join(' ');
+if(!reason) reason = "No reason provided";
+
+await member.ban(reason)
+  .catch(error => message.reply(`Sorry ${message.author} I couldn't ban because of : ${error}`));
+message.reply(`${member.user.tag} has been banned by ${message.author.tag} because: ${reason}`);
+  message.member.tag.sendMessage('Hi! You were banned from ${member.user.server} because: {reason}. If you do not get why you were banned, please DM @Lazyy#9825.')
+  }
    
     
     
