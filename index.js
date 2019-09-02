@@ -22,6 +22,20 @@ fs.readdir("./commands/", (err, files) => {
     });
 })
 
+const EventEmitter = require('events');
+
+class MyEmitter extends EventEmitter {}
+
+const myEmitter = new MyEmitter();
+// increase the limit
+myEmitter.setMaxListeners(11);
+
+for(let i = 0; i < 11; i++) {
+  myEmitter.on('event', _ => console.log(i));
+}
+
+myEmitter.emit('event');
+
 
 
 bot.on("ready", async() => {
