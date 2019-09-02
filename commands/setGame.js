@@ -21,3 +21,7 @@ module.exports.run = async (bot, message, args) => {
     if(!config.maintainers.includes(msg.author.id)) return msg.channel.send(noPerms)
     if(game.size < 1) return msg.channel.send(missingArgument_game)
     bot.user.setActivity(game)
+
+    module.exports.help = {
+    name: "setGame"
+}
