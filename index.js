@@ -26,11 +26,7 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async() => {
     console.log(`${bot.user.username} is online!`);
-    //if you want the bot change back its name everytime
-    bot.user.setUsername("BOT Chen");
 
-    //was making joke on a friend
-    //bot.user.setActivity("Chan Ho is Gay",{type: "STREAMING"});
     bot.user.setActivity("Being developed!",{type: "PLAYING"});
 });
 
