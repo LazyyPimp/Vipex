@@ -18,4 +18,8 @@ if(cmd === "kick") {
         message.guild.member(kUser).kick(kReason);
         adminlog.send(kickEmbed);
     };
+
+module.exports.help = {
+    name: "kick"
+}
     
