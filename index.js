@@ -49,11 +49,6 @@ bot.on("message", async message => {
     let commandfile = bot.commands.get(cmd.slice(prefix.length));
     if(commandfile) commandfile.run(bot, message, args);
 
-    //Heroku Test
-        if (message.content === 'ping') {
-    	message.reply('pong');
-  	}
-    
     
     client.on('message', message => {
   if (message.content === '.avatar') {
@@ -75,9 +70,6 @@ bot.on('message', message => {
     message.reply("Lazyy#9825");
   }
 });
-
-    const cmd = args.shift().toLowerCase();
-
     
      if (cmd === "ping") {
         const msg = await message.channel.send(`🏓 Pinging....`);
