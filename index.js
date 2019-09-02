@@ -100,7 +100,7 @@ bot.on('message', message => {
         adminlog.send(kickEmbed);
     };
     
-    if(command === ".ban") {
+    if(cmd === ".ban") {
   if(!message.member.roles.some(r=>["Administrator"].includes(r.name)) )
 return message.reply("Sorry, you don't have permissions to use this!");
 
