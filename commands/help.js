@@ -6,7 +6,7 @@ if(!prefix){
     prefix = ".";
 }
   message.channel.send("```" + "\n" +
-                       "Type " + prefix + "ping to get a simple pong response\n" +
+                       "Type " + prefix + "ping to get your latency" +
                        "Type " + prefix + "sinfo for server info!\n" +
                        "Type " + prefix + "binfo for bot info!\n" +
                        "Type " + prefix + "userinfo for user info!\n" +
@@ -15,7 +15,11 @@ if(!prefix){
                        "Type " + prefix + "prefix [new prefix] for customized prefix!\n" +
                        "Type " + prefix + "tempmute [1s/1m/1h] to mute a user!\n" +
                        "Type " + prefix + "clear [amount] to clear messages!\n" +
-                       "Type " + prefix + "eatwhat for food suggestion!\n" 
+                       "Type " + prefix + "eatwhat for food suggestion!\n" +
+                       "Type " + prefix + "kick to kick members from the server!\n +
+                       "Type " + prefix + "ban to ban a member!\n" +
+                       "Type " + prefix + "dm to dm any person in the server!\n" +
+                       "Type " + prefix + "report to report a member in the server!\n
                        + "```");
 
 
@@ -29,7 +33,6 @@ if(!prefix){
                         "Type " + prefix + "say to let the bot say for you!\n" +
                         "Type " + prefix + "embed to let the bot embed for you!\n" +
                         "Type " + prefix + "flip to flip a coin!\n" +
-                        "Type " + prefix + "chen to get a ascii art of chen!\n" +
                         "Type " + prefix + "asciiart to get a random asciiart!\n" +
                         "Type " + prefix + "honk to get a random honk song!\n" +
                         "Type " + prefix + "vaporwave [text] to vapor text!\n" +
@@ -41,7 +44,9 @@ if(!prefix){
                         "Type " + prefix + "party to get a party website!\n" +
                         "Type " + prefix + "uselessfact to get a useless fact!\n" +
                         "Type " + prefix + "uselessweb to get a useless website!\n" +
-                        "Type " + prefix + "google [stuff] to google stuffs!\n"
+                        "Type " + prefix + "google [stuff] to google stuffs!\n" +
+                        "Type " + prefix + "uptime to get the bots uptime in all servers!\n" +
+                        "Type" + prefix + "online,idle,dnd,invis to set bot status!\n
                         + "```");
 
 }
