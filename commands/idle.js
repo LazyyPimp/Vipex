@@ -1,5 +1,9 @@
+const Discord = require("discord.js");
+
+
+
 module.exports.run = async (bot, message, args) => {
-client.user.setStatus('idle')
+bot.user.setStatus('idle')
   .then(console.log)
   .catch(console.error);
 }
