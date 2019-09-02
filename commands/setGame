@@ -17,7 +17,5 @@ module.exports.run = (bot, message, args, discord) => {
 }
 
 module.exports.help = {
-  name: "setGame",
-  usage: ``,
-  information: ""
-}
+  name: "setGame"
+  }
