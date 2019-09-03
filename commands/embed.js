@@ -2,6 +2,10 @@ const talkedRecently = new Set();
 
 
 module.exports.run = async (bot, message , args, prefix) => {
+ 
+   if (talkedRecently.has(message.author.id)) {
+            message.channel.send("Wait 1 minute before getting typing this again. - " + message.author);
+    } else {
 
  if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("You dont have such permission.").then(message => message.delete(3000));
 
@@ -13,9 +17,7 @@ module.exports.run = async (bot, message , args, prefix) => {
     .setColor(0x00A2E8);
   message.channel.send({embed});
  
-  if (talkedRecently.has(message.author.id)) {
-            message.channel.send("Wait 1 minute before getting typing this again. - " + message.author);
-    } else {
+
 
            // the user can type the command ... your command code goes here :)
 
