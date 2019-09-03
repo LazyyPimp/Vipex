@@ -10,3 +10,7 @@ module.exports.run = async (bot, message , args, prefix) => {
     .setColor(0x00A2E8);
   message.channel.send({embed});
 }
+
+module.exports.help = {
+    name: "embed"
+}
