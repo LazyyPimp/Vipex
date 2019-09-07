@@ -63,27 +63,19 @@ bot.on("message", async message => {
     let commandfile = bot.commands.get(cmd.slice(prefix.length));
     if(commandfile) commandfile.run(bot, message, args);
 
-    
-    bot.on('message', message => {
-  if (message.content === '.avatar') {
+   if(cmd === ".avatar") {
     message.reply(message.author.avatarURL);
+  };
+
+
+if(cmd === invite) {
+    message.author.send("https://discord.gg/FVps9Me");
+}
+
+
+if(cmd === ".owner") {
+    message.author.send("Lazyy#9825");
   }
-});
-
-
-bot.on('message', message => {
-  if (message.content === '.invite') {
-    message.reply("https://discord.gg/3YfpZrG");
-  }
-});
-
-
-
-bot.on('message', message => {
-  if (message.content === '.owner') {
-    message.reply("Lazyy#9825");
-  }
-});
     
      if (cmd === ".ping") {
         const msg = await message.channel.send(`🏓 Pinging....`);
@@ -146,7 +138,7 @@ message.reply(`${member.user.tag} has been banned by ${message.author.tag} becau
         .addField("You Joined", message.member.joinedAt)
         .addField("Total Members", message.guild.memberCount);
 
-        return message.channel.send(serverInfo);
+        return message.author.send(serverInfo);
     }
 
     if(cmd == `${prefix}botinfo` || cmd == `${prefix}binfo`){
@@ -160,7 +152,7 @@ message.reply(`${member.user.tag} has been banned by ${message.author.tag} becau
         .addField("Owner", "Lazyy")
         .addField("Created On", bot.user.createdAt);
 
-        return message.channel.send(botInfo);
+        return message.author.send(botInfo);
     }
 });
 
