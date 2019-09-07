@@ -68,7 +68,7 @@ bot.on("message", async message => {
   };
 
 
-if(cmd === invite) {
+if(cmd === "invite") {
     message.author.send("https://discord.gg/FVps9Me");
 }
 
