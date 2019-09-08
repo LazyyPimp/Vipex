@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args, prefix) => {
 if(!prefix){
     prefix = ".";
 }
-  message.channel.send("```" + "\n" +
+  message.author.send("```" + "\n" +
                        "Type " + prefix + "ping to get your latency" +
                        "Type " + prefix + "sinfo for server info!\n" +
                        "Type " + prefix + "binfo for bot info!\n" +
@@ -23,7 +23,7 @@ if(!prefix){
                        + "```");
 
 
-    message.channel.send("```" + "\n" +
+    message.author.send("```" + "\n" +
                         "Type " + prefix + "cat for a random cute cat!\n" +
                         "Type " + prefix + "doggo for a random cute dog!\n" +
                         "Type " + prefix + "hi to chat with the bot!\n" +
@@ -48,6 +48,8 @@ if(!prefix){
                         "Type " + prefix + "uptime to get the bots uptime in all servers!\n" +
                         "Type " + prefix + "online,idle,dnd,invis to set bot status!\n"
                         + "```");
+    
+    message.channel.send("Check DMs")
 
 }
 
