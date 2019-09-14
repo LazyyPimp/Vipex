@@ -11,9 +11,7 @@ module.exports.run = (bot, message, args, discord) => {
   } else {
     bot.user.setActivity(`${game}`, {type: "PLAYING"})
     message.channel.send(`:ok_hand: Okay, I will set my activity to '${game}'!`)
-   
-  } else {
-     message.channel.send("Nope!")
+  
   }
 }
 
