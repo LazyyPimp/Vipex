@@ -2,7 +2,6 @@ const oid = process.env.oid
 
 module.exports.run = (bot, message, args, discord) => {
  var game = args.join(' ')
-  if (message.author.id == oid) {
    
    if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("You can't use that command!")
    if (!game) {
@@ -12,10 +11,10 @@ module.exports.run = (bot, message, args, discord) => {
   } else {
     bot.user.setActivity(`${game}`, {type: "PLAYING"})
     message.channel.send(`:ok_hand: Okay, I will set my activity to '${game}'!`)
-  }
+   
   } else {
      message.channel.send("Nope!")
-  } 
+  }
 }
 
 module.exports.help = {
