@@ -8,7 +8,7 @@ const Discord = require('discord.js');
    let dMessage = args.join(" ").slice(22);	
    if(dMessage.length < 1) return message.reply('You must supply a message!')	
 
-      dUser.send(`<@!557608896340951060> sent you: ${dMessage}`)	
+      dUser.send(`${message.author} sent you: ${dMessage}`)	
 
       message.author.send(`${message.author} You have sent your message to ${dUser}`)	
 
