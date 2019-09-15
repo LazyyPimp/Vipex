@@ -66,6 +66,79 @@ bot.on("message", async message => {
    if(cmd === ".avatar") {
     message.reply(message.author.avatarURL);
   };
+    
+    
+        const swearWords = [
+    "beeyotch",
+    "biatch",
+    "bitch",
+    "chinaman",
+    "chinamen",
+    "chink",
+    "crazie",
+    "crazy",
+    "crip",
+    "cunt",
+    "dago",
+    "daygo",
+    "dego",
+    "dick",
+    "dumb",
+    "douchebag",
+    "dyke",
+    "fag",
+    "fatass",
+    "fatso",
+    "gash",
+    "gimp",
+    "golliwog",
+    "gook",
+    "gyp",
+    "halfbreed",
+    "half-breed",
+    "homo",
+    "hooker",
+    "idiot",
+    "insane",
+    "insanitie",
+    "jap",
+    "kike",
+    "kraut",
+    "lame",
+    "lardass",
+    "lesbo",
+    "lunatic",
+    "negro",
+    "nigga",
+    "nigger",
+    "nigguh",
+    "paki",
+    "pickaninnie",
+    "pickaninny",
+    "pussie",
+    "pussy",
+    "raghead",
+    "retard",
+    "shemale",
+    "skank",
+    "slut",
+    "spade",
+    "spic",
+    "spook",
+    "tard",
+    "tits",
+    "titt",
+    "trannie",
+    "tranny",
+    "twat",
+    "wetback",
+    "whore",
+    "wop"
+]
+if( swearWords.some(word => message.content.includes(word))) {
+  message.reply("Watch your language!");
+    message.delete();
+};
 
 
 if(cmd === ".invite") {
