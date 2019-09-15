@@ -466,8 +466,6 @@ const swearWords = [
 "lezzie",
 "lezzies",
 "lezzy",
-"lmao",
-"lmfao",
 "loin",
 "loins",
 "lube",
