@@ -14,7 +14,7 @@ await msg.channel.messages.fetch({ limit: amount }).then(messages => { // Fetche
     msg.channel.bulkDelete(messages) // Bulk deletes all messages that have been fetched and are not older than 14 days (due to the Discord API)
                            
   });
-                           
-module.exports.help = {	
+                          
+  module.exports.help = {
     name: "clear"
-     }
+};
