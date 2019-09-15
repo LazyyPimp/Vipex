@@ -181,9 +181,6 @@ message.reply(`${member.user.tag} has been banned by ${message.author.tag} becau
             console.log('Error while doing Bulk Delete');
             console.log(err);
           });
-    }
-    }
-}));
 
 //Self Hosting
 //bot.login(tokenfile.token);
