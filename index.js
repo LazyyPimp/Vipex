@@ -154,7 +154,7 @@ message.reply(`${member.user.tag} has been banned by ${message.author.tag} becau
 
         return message.author.send(botInfo);
     }
-    if (cmd == `${prefix}purge) {
+    if (cmd == `${prefix}purge`) {
 
 
       if (!message.channel.permissionsFor(message.author).hasPermission("MANAGE_MESSAGES")) {
