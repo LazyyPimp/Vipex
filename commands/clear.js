@@ -15,6 +15,6 @@ await msg.channel.messages.fetch({ limit: amount }).then(messages => { // Fetche
                            
   });
                           
-  module.exports.help = {
+module.exports.help = {
     name: "clear"
-};
+}
