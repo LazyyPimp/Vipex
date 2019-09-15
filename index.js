@@ -154,6 +154,7 @@ message.reply(`${member.user.tag} has been banned by ${message.author.tag} becau
 
         return message.author.send(botInfo);
     }
+});
 //Self Hosting
 //bot.login(tokenfile.token);
 
