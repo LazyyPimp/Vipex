@@ -183,8 +183,7 @@ message.reply(`${member.user.tag} has been banned by ${message.author.tag} becau
           });
     }
     }
-});
-});
+}));
 
 //Self Hosting
 //bot.login(tokenfile.token);
