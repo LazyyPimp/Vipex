@@ -182,7 +182,7 @@ message.reply(`${member.user.tag} has been banned by ${message.author.tag} becau
             console.log(err);
           });
     }
-  });
+    }
 });
 });
 
