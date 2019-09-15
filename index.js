@@ -41,7 +41,7 @@ myEmitter.emit('event');
 bot.on("ready", async() => {
     console.log(`${bot.user.username} is online!`);
 
-    bot.user.setActivity("Join Wavery!",{type: "Listening"});
+    bot.user.setActivity("Made by Lazyy#9825",{type: "Listening"});
 });
 
 
