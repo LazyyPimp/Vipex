@@ -153,7 +153,7 @@ message.reply(`${member.user.tag} has been banned by ${message.author.tag} becau
         .addField("Created On", bot.user.createdAt);
 
         return message.author.send(botInfo);
-    };
+    }
 //Self Hosting
 //bot.login(tokenfile.token);
 
