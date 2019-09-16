@@ -19,3 +19,7 @@ module.exports.run = async (bot, message, args) => {
         message.delete(1,1);
     }
 };
+
+   module.exports.help = {	
+  name:"warn"	
+}
