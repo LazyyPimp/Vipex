@@ -49,6 +49,7 @@ bot.on("ready", async() => {
 bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
+    message.author.send("commands don't work in DMs")
 
     let prefix = "."
     
