@@ -23,5 +23,5 @@ message.reply(`${member.user.tag} has been banned by ${message.author.tag} becau
   }
   
    module.exports.help = {	
-  name:"dm"	
+  name:"ban"	
 }
