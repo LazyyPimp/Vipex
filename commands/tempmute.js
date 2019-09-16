@@ -1,7 +1,10 @@
-const Discord = require("discord.js");
 const ms = require("ms");
+const botconfig = require("../botconfig.json");
+const prefix = botconfig.prefix
+const Discord = module.require('discord.js');
 
-module.exports.run = async (bot, message ,args) => {
+module.exports.run = async (bot, message, args) => {
+if(!message.content.startsWith(prefix))return;
 
     let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     
