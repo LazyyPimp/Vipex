@@ -2,13 +2,7 @@ const Discord = require("discord.js");
 const superagent = require("superagent");
 
 module.exports.run = async (bot,message,args) => {
-     
-   var prefix = prefixes[message.guild.id].prefixes;
-
-    if(!message.content.startsWith(prefix))return;
-
-
-
+ 
     let {body} = await superagent
     .get(`http://aws.random.cat/meow`);
 
