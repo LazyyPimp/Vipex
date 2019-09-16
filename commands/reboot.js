@@ -10,7 +10,6 @@ module.exports.run = async (bot, message, args) => {
 		setTimeout(function(){process.exit(1)}, 3000)
 	}
 }
-}
 
    module.exports.help = {	
   name:"reboot"	
