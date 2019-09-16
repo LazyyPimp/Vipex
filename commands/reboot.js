@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
 	if (message.author.id === "531917249418625044") {
 		message.channel.send("Rebooting...")
 		setTimeout(function(){process.exit(1)}, 3000)
-		client.login(process.env.BOT_TOKEN));
+		client.login(process.env.BOT_TOKEN);
 	}
 }
 
