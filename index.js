@@ -5,6 +5,7 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
+var numberofmentions = 1;
 
 fs.readdir("./commands/", (err, files) => {
 
@@ -44,6 +45,23 @@ bot.on("ready", async() => {
     bot.user.setActivity("Made by Lazyy#9825",{type: "Listening"});
 });
 
+
+
+client.on("message", async message => {
+
+if(message.author.bot) { return; }
+
+if(!message.mentions.members.array()[2]){ return; }
+
+message.author.send(`Please stop mass mentioning.`)
+
+numberofmentions++;
+
+if(numberofmentions > 3){
+  message.member.kick();
+  message.author.send(`You've Been Kicked From ${message.guild} for Spamming Mentions.`);
+  message.channel.send(`User ${message.author.username}#${message.author.discriminator} Has Been Kicked For Mass Mentinoing`);
+}
 
 bot.on("message", async message => {
     if(message.author.bot) return;
