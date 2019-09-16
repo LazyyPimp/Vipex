@@ -1,6 +1,11 @@
 const oid = process.env.oid
+const botconfig = require("../botconfig.json");
+const prefix = botconfig.prefix
+const Discord = module.require('discord.js');
 
-module.exports.run = (bot, message, args, discord) => {
+module.exports.run = async (bot, message, args) => {
+if(!message.content.startsWith(prefix))return;
+ 
  var game = args.join(' ')
    
    if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("You can't use that command!")
