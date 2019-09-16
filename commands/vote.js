@@ -1,9 +1,12 @@
-const Discord  = module.require('discord.js');
+const botconfig = require("../botconfig.json");
+const prefix = botconfig.prefix
+const Discord = module.require('discord.js');
 
 const agree    = "✅";
 const disagree = "❎";
 
 module.exports.run = async (bot, message, args) => {
+if(!message.content.startsWith(prefix))return;
 
   let msg = await message.channel.send("Vote now! (30 Seconds)");
   await msg.react(agree);
