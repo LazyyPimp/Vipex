@@ -44,7 +44,7 @@ bot.on("ready", async() => {
     bot.user.setActivity("Made by Lazyy#9825",{type: "Listening"});
 });
 
-client.on("message", (message) => {
+bot.on("message", (message) => {
 //let's use something like a spam variable for 10 or more messages sent within 5000ms
 if(message.content === spam) {
     message.channel.bulkDelete(11);
