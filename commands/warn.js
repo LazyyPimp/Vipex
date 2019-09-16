@@ -7,7 +7,6 @@ module.exports.run = async (bot, message, args) => {
         message.delete(1,1);
     }
 
-    else {
         let member = message.mentions.members.first();
         let user = message.mentions.users.first();
         let reason = message.content.split(/\s+/g).slice(2).join(" ");
