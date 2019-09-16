@@ -1,7 +1,9 @@
-const Discord = require("discord.js");
-const superagent = require("superagent");
+const botconfig = require("../botconfig.json");
+const prefix = botconfig.prefix
+const Discord = module.require('discord.js');
 
-module.exports.run = async (bot,message,args) => {
+module.exports.run = async (bot, message, args) => {
+if(!message.content.startsWith(prefix))return;
 
     let {body} = await superagent
     .get(`https://random.dog/woof.json`);
