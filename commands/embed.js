@@ -1,7 +1,10 @@
 const talkedRecently = new Set();
+const botconfig = require("../botconfig.json");
+const prefix = botconfig.prefix
+const Discord = module.require('discord.js');
 
-
-module.exports.run = async (bot, message , args, prefix) => {
+module.exports.run = async (bot, message, args) => {
+if(!message.content.startsWith(prefix))return;
  
    if (talkedRecently.has(message.author.id)) {
             message.channel.send("Wait 1 minute before getting typing this again. - " + message.author);
