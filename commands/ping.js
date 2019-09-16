@@ -8,7 +8,7 @@ if(!message.content.startsWith(prefix))return;
 const msg = await message.channel.send(`🏓 Pinging....`);
 
         msg.edit(`🏓 Pong!\nLatency is ${Math.floor(msg.createdTimestap - message.createdTimestap)}ms\nAPI Latency is ${Math.round(bot.ping)}ms`);
-        
+}
 module.exports.help = {	
   name:"ping"	
 }
