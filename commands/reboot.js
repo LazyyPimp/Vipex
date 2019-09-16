@@ -1,4 +1,9 @@
-module.exports.run = async (bot, message, args) => {	
+const botconfig = require("../botconfig.json");
+const prefix = botconfig.prefix
+const Discord = module.require('discord.js');
+
+module.exports.run = async (bot, message, args) => {
+if(!message.content.startsWith(prefix))return;
   
   
   if (message.author.id !== "531917249418625044") {
