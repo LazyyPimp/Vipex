@@ -1,6 +1,10 @@
-const discord = require('discord.js');
+const botconfig = require("../botconfig.json");
+const prefix = botconfig.prefix
+const Discord = module.require('discord.js');
 
-module.exports.run = (bot, message, args) => {
+module.exports.run = async (bot, message, args) => {
+if(!message.content.startsWith(prefix))return;
+  
   var hrs = Math.round(bot.uptime / (1000 * 60 * 60)) + " hour(s),"
   var mins = " " + Math.round(bot.uptime / (1000 * 60)) % 60 + " minute(s), "
   var sec = Math.round(bot.uptime / 1000) % 60 + " second(s)"
