@@ -44,15 +44,6 @@ bot.on("ready", async() => {
     bot.user.setActivity("Made by Lazyy#9825",{type: "Listening"});
 });
 
-bot.on("message", (message) => {
-//let's use something like a spam variable for 10 or more messages sent within 5000ms
-if(message.content === spam) {
-    message.channel.bulkDelete(11);
-    message.reply("Warning: Spamming in this channel is forbidden.");
-    console.log(message.author.username + " (" + message.author.id + ") has sent 10 messages or more in 5 seconds in " + message.channel.name + ".");
-  }
-});
-
 
 
 bot.on("message", async message => {
@@ -94,8 +85,12 @@ if(cmd === ".owner") {
         msg.edit(`🏓 Pong!\nLatency is ${Math.floor(msg.createdTimestap - message.createdTimestap)}ms\nAPI Latency is ${Math.round(bot.ping)}ms`);
     }
     
+    if(cmd === ".suicide") {
+      message.channel.send('***'+message.author.username+' has committed suicide***');
+      message.member.kick();
+    }
     
-    	 if(cmd === ".kick") {
+         if(cmd === ".kick") {
         message.delete()
         let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
         if(!kUser) return message.channel.send("❌ Please **@mention** your target!");
