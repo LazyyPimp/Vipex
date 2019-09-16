@@ -1,10 +1,10 @@
+const botconfig = require("../botconfig.json");
 const Discord = module.require('discord.js');
 
-module.exports.run = async (bot, message, args, prefix) => {
+module.exports.run = async (bot, message, args) => {
+const prefix = botconfig.prefix
+if(!message.content.startsWith(prefix))return;
 
-if(!prefix){
-    prefix = ".";
-}
   message.author.send("```" + "\n" +
                        "Type " + prefix + "ping to get your latency" +
                        "Type " + prefix + "sinfo for server info!\n" +
