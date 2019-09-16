@@ -1,7 +1,10 @@
-const Discord = module.require('discord.js');
 const ms = require('ms');
+const botconfig = require("../botconfig.json");
+const prefix = botconfig.prefix
+const Discord = module.require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
+if(!message.content.startsWith(prefix))return;
 
   let Timer = args[0];
 
