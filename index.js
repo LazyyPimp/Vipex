@@ -72,12 +72,7 @@ if(cmd === ".owner") {
     message.author.send("Lazyy#9825");
   }
     
-     if (cmd === ".ping") {
-        const msg = await message.channel.send(`🏓 Pinging....`);
-
-        // Edit the message
-        msg.edit(`🏓 Pong!\nLatency is ${Math.floor(msg.createdTimestap - message.createdTimestap)}ms\nAPI Latency is ${Math.round(bot.ping)}ms`);
-    }
+        
     
     if(cmd === ".suicide") {
         message.delete()
