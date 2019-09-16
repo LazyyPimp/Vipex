@@ -73,6 +73,7 @@ bot.on("message", async message => {
             prefixes: botconfig.prefix
         };
     }
+});
 
     var prefix = prefixes[message.guild.id].prefixes;
     let messageArray = message.content.split(" ");
