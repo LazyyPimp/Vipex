@@ -51,6 +51,27 @@ bot.on('guildMemberAdd', member => {
   member.addRole(role);
 });
 
+client.on('guildMemberAdd', member => {
+client.on('message', 
+
+
+member.guild.channels.get('627870659409608748').send({embed: {
+color: 3447003,
+title: "**Martin Marooki's** Welcome Bot!",
+url: "WEBSITE URL",
+description: "Welcome *" + member + "* to the **Server name** discord server!",
+fields: [{
+    name: "Information",
+    value: "Read the rules"
+  }
+],
+timestamp: new Date(),
+footer: {
+  icon_url: client.user.avatarURL,
+  text: "VIPEX"
+}
+}}); });
+
 
 
 bot.on("message", async message => {
