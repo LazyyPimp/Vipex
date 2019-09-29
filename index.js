@@ -51,11 +51,11 @@ bot.on('guildMemberAdd', member => {
   member.addRole(role);
 });
 
-client.on('guildMemberAdd', member => {
-client.on('message', 
+bot.on('guildMemberAdd', member => {
+bot.on('message', 
 
 
-member.guild.channels.get('627870659409608748').send({embed: {
+member.guild.channels.find('name' 'Welcome').send({embed: {
 color: 3447003,
 title: "**Martin Marooki's** Welcome Bot!",
 url: "WEBSITE URL",
@@ -67,10 +67,10 @@ fields: [{
 ],
 timestamp: new Date(),
 footer: {
-  icon_url: client.user.avatarURL,
+  icon_url: bot.user.avatarURL,
   text: "VIPEX"
 }
-}}); });
+}})); });
 
 
 
