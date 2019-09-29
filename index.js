@@ -51,29 +51,6 @@ bot.on('guildMemberAdd', member => {
   member.addRole(role);
 });
 
-bot.on('guildMemberAdd', member => {
-bot.on('message', 
-
-
-member.guild.channels.find('name', 'Welcome').send({embed: {
-color: 3447003,
-title: "**Martin Marooki's** Welcome Bot!",
-url: "WEBSITE URL",
-description: "Welcome *" + member + "* to the **Server name** discord server!",
-fields: [{
-    name: "Information",
-    value: "Read the rules"
-  }
-],
-timestamp: new Date(),
-footer: {
-  icon_url: bot.user.avatarURL,
-  text: "VIPEX"
-}
-}})); });
-
-
-
 bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
