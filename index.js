@@ -55,7 +55,7 @@ bot.on('guildMemberAdd', member => {
 bot.on('message', 
 
 
-member.guild.channels.find('name' 'Welcome').send({embed: {
+member.guild.channels.find('name', 'Welcome').send({embed: {
 color: 3447003,
 title: "**Martin Marooki's** Welcome Bot!",
 url: "WEBSITE URL",
