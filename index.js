@@ -44,6 +44,13 @@ bot.on("ready", async() => {
     bot.user.setActivity("Made by Lazyy#9825",{type: "Listening"});
 });
 
+bot.on('guildMemberAdd', member => {
+  console.log('User' + member.user.tag + 'has joined the server!');
+
+  var role = member.guild.roles.find('name', 'Member');
+  member.addRole(role);
+}
+
 
 
 bot.on("message", async message => {
