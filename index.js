@@ -40,7 +40,6 @@ myEmitter.emit('event');
 
 bot.on("ready", async() => {
     console.log(`${bot.user.username} is online!`);
-    bot.send(`${bot.user.username} is now online.`);
 
     bot.user.setActivity("Made by Lazyy#9825",{type: "Listening"});
 });
