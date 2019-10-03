@@ -14,6 +14,7 @@ if(!message.content.startsWith(prefix))return;
 		message.channel.send("Rebooting...")
 		setTimeout(function(){process.exit(1)}, 3000)
 		client.login(process.env.BOT_TOKEN);
+		message.channel.send("Rebooted")
 	}
 }
 
